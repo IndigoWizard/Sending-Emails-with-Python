@@ -10,18 +10,19 @@ from sys import argv
 # password = "micro000club"
 sender_email = argv[1]
 password = argv[2]
+subject = input('Subject: ')
 
 mailSent = 0
 
 for receiver_email in open('emails.txt', 'r').readlines():
     message = MIMEMultipart("alternative")
-    message["Subject"] = "Micro Club - LHD Share - April 11th 2020"
+    message["Subject"] = subject
     message["From"] = sender_email
     message["To"] = receiver_email.strip()
 
     # Create the plain-text and HTML version of your message
     text = """\
-    Micro Club - LHD Share - April 11th 2020"""
+    """ + subject
     html = open(argv[3],
                 'r', encoding='utf-8').read()
 
