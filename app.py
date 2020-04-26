@@ -4,10 +4,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from sys import argv
 
-# sender_email = "microclubist@gmail.com"
-# password = "1000wabaja31415year"
-# sender_email = "microclub.contact@gmail.com"
-# password = "micro000club"
+
 sender_email = argv[1]
 password = argv[2]
 subject = input('Subject: ')
